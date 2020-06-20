@@ -171,7 +171,8 @@ int main()
                     //std::cout << "#";
                     cout << "_";
             }
-            SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY);
+            SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY| FOREGROUND_RED |
+                FOREGROUND_BLUE);
             //std::cout << "] ";
             cv.recursor(0, 27);
             std::cout << a[i % 4] << "正在加载中";
