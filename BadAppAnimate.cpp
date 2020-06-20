@@ -17,6 +17,8 @@
 
 using namespace std;
 
+char a[4] = { '|','/','-','\\' };
+
 class CharacterVideo
 {
 public:
@@ -35,7 +37,7 @@ public:
     }
 };
 
-int main1()
+int main()
 {
     /*================测试颜色字体输出=======================
     
@@ -155,8 +157,31 @@ int main1()
                 cout << str;
             }
             File.close();
+            //=======================
+            //80格子，每帧占比：80/6570  6570/80帧后加载一格（82）
+            //cout << endl;
+            //SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | BACKGROUND_INTENSITY);
+            SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),  BACKGROUND_RED |
+                BACKGROUND_BLUE | BACKGROUND_INTENSITY);
+            cv.recursor(0, 26);
+            cout<< " [";
+            if (i % 82 == 0)
+            {
+                for (int j = i / 82; j > 0; j--)
+                    //std::cout << "#";
+                    cout << "_";
+            }
+            SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY);
+            //std::cout << "] ";
+            cv.recursor(0, 27);
+            std::cout << a[i % 4] << "正在加载中";
+            
+            //=======================
+            
             startTime += delayTime;
             cv.recursor(0, 0);
+            SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_GREEN |
+                FOREGROUND_BLUE);
         }       
     }
 

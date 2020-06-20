@@ -3,7 +3,7 @@
 #include <windows.h>
 
 void gotoxy(int x, int y);
-int main()
+int main2()
 {
 	char a[4] = { '|','/','-','\\' };	//存储相关的字符
 	int i, j, x = 2, y = 1;	//声明变量
@@ -14,19 +14,21 @@ int main()
 	for (i = 0; i <= 100; i++) {	//进度条总进度控制
 		std::cout << " [";	//进度条左边框
 		for (j = 0; j < i / 10; j++) {	//控制加载进度的显示
-			SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | BACKGROUND_INTENSITY);	//设置加载条样式配置
-			std::cout << "_";
+			//SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | BACKGROUND_INTENSITY);	//设置加载条样式配置
+			//std::cout << "_";
+			std::cout << "#";
 		}
-		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY);	//恢复原配置
-		for (j = 0; j < (10 - (i / 10)); j++) { printf("%c", '.'); }	//未加载进度显示
+		//SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY);	//恢复原配置
+		//for (j = 0; j < (10 - (i / 10)); j++) { printf("%c", '.'); }	//未加载进度显示
 		std::cout << "] ";	//进度条右边框
 		std::cout << a[i % 4] << "正在加载中";	//显示和程序进行中提示和“正在加载”字样提示
-		for (j = 0; j < (i % 4); j++) { std::cout << "."; }	//实现动态显示
-		for (j = 0; j < (4 - i % 4); j++) { printf("%c", ' '); }
+		//for (j = 0; j < (i % 4); j++) { std::cout << "."; }	//实现动态显示
+		//for (j = 0; j < (4 - i % 4); j++) { printf("%c", ' '); }
 		Sleep(100);	//控制程序运行速度
 		putchar('\r');	//回车
 	}
 	std::cout << "( ゜- ゜)つロBiliBili干杯~\n" << std::endl;	//防覆盖
+	return 0;
 }
 void gotoxy(int x, int y)	//自定义 gotoxy 函数
 {
