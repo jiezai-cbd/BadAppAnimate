@@ -164,13 +164,15 @@ int main()
             SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),  BACKGROUND_RED |
                 BACKGROUND_BLUE | BACKGROUND_INTENSITY);
             cv.recursor(0, 26);
-            cout<< " [";
+            cout<< "[";
             if (i % 82 == 0)
             {
                 for (int j = i / 82; j > 0; j--)
                     //std::cout << "#";
                     cout << "_";
             }
+            cv.recursor(78,26);
+            cout << "]";
             SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY| FOREGROUND_RED |
                 FOREGROUND_BLUE);
             //std::cout << "] ";
