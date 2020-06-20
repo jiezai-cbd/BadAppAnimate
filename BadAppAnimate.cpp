@@ -35,7 +35,7 @@ public:
     }
 };
 
-int main()
+int main1()
 {
     /*================测试颜色字体输出=======================
     
@@ -167,5 +167,6 @@ int main()
     //cout << "a" << endl;
     //cin.get();
     system("pause");
+    return 0;
 }
 
