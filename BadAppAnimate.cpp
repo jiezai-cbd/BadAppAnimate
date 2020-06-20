@@ -6,36 +6,37 @@
 //解决sprintf编译报错问题
 #define _CRT_SECURE_NO_WARNINGS  
 
-#include <iostream>
-#include<fstream>
-#include<time.h>
-#include<Windows.h>
-#include<mmsystem.h>
-#include <tchar.h>
-#include<string>
+//#include <iostream>
+//#include<fstream>
+//#include<time.h>
+//#include<Windows.h>
+//#include<mmsystem.h>
+//#include <tchar.h>
+//#include<string>
 //#include<string.h>
+#include "CharacterVideo.h"
 
 using namespace std;
 
 char a[4] = { '|','/','-','\\' };
 
-class CharacterVideo
-{
-public:
-    HANDLE handle;
-    COORD coord;
-    void renewfileName(char* fileName,int fileNo)
-    {
-        sprintf(fileName, "%s%d%s", "baascii\\ba(", fileNo, ").txt");
-    }
-    void recursor(int x, int y)
-    {
-        coord.X = x;
-        coord.Y = y;
-        handle = GetStdHandle(STD_OUTPUT_HANDLE);
-        SetConsoleCursorPosition(handle, coord);
-    }
-};
+//class CharacterVideo
+//{
+//public:
+//    HANDLE handle;
+//    COORD coord;
+//    void renewfileName(char* fileName,int fileNo)
+//    {
+//        sprintf(fileName, "%s%d%s", "baascii\\ba(", fileNo, ").txt");
+//    }
+//    void recursor(int x, int y)
+//    {
+//        coord.X = x;
+//        coord.Y = y;
+//        handle = GetStdHandle(STD_OUTPUT_HANDLE);
+//        SetConsoleCursorPosition(handle, coord);
+//    }
+//};
 
 int main()
 {
