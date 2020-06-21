@@ -99,8 +99,9 @@ int main()
     }
     cout << endl;
     fileBanner.close();
+#if 0
     //突然发现我好沙雕。。这图片完全可以从文件中读出的。。。
-   /* cout << "\t\tUu5IS255X5XI2svrriLIgQBBBBBBBZ57rr77J1S5XSSI5IS5S\n" <<
+    cout << "\t\tUu5IS255X5XI2svrriLIgQBBBBBBBZ57rr77J1S5XSSI5IS5S\n" <<
         //"U             LPRBBBRgdbqPPDgQBBBQXs\n" <<
         "\t\t5 SU2U55K  XBBBBg2s7          vLSgBQBQX  5S2215K\n" <<
         "\t\tI 21J1u  DQBBPv   vLLjj1J1j1JJvL   sqBQBP  UJJjX\n" <<
@@ -128,7 +129,8 @@ int main()
        // "X IuujU  bBBBPs   vvssuj1J1JuYLv   sdBBBb  1uJ1S\n" <<
         //"5 KXISXPq  PBBBBD5v7          7Y2gBBBBK  PKK5X5b\n" <<
         //"q             YIgQBBBBBQQRQQBQBBQd5v"<<endl;
-        */
+        
+#endif
     SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_RED |
         FOREGROUND_GREEN);//设置红色和绿色相加
     cout << "\t\tCopyright © 2020/6/20 jeizai_cbd All rights reserved";

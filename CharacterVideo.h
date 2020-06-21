@@ -1,5 +1,5 @@
-//#pragma once
-
+//#pragma once  
+//传统的c语言防止头文件重复包含
 #ifndef CHARACTERVIDEO_H
 #define CHARACTERVIDEO_H
 #pragma comment(lib, "winmm")
